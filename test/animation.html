@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="box" style="width:100px; height:100px; background:green; "></div>
+<br><br><br>
+<button id="move">Move Box</button>
+<script>
+$(document).ready(function(){
+    $("#move").click(function(){
+        $("#box").animate({
+            left: '250px',
+            width: '150px',
+            height: '150px',
+            opacity: 0.5
+        }, 1000);
+    });
+});
+</script>
+
+</body>
+</html>

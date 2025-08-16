@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Click -->
+    <div id="clickBox" class="box">Click Me</div>
+    <!-- double click -->
+    <div id="dblClickBox" class="box">Double Click Me</div>
+    <!-- hover -->
+    <div id="hoverBox" class="box">Hover Over Me</div>
+    
+    <div id="mouseEnterLeaveBox" class="box">Mouse Enter/Leave</div>
+
+    <script>
+
+        $(document).ready(function () {
+            // click   (  this - Event handler )
+            $("#clickBox").click(function () {
+                $(this).css("background-color", "lightgreen").text("Clicked!");
+            });
+
+            // double click
+            $("#dblClickBox").dblclick(function () {
+                $(this).css("background-color", "orange").text("Double Clicked!");
+            });
+
+            // hover 
+            $("#hoverBox").hover(
+                function () { // Mouse enter
+                    $(this).addClass("highlight").text("Mouse is over me!");
+                },
+                function () { // Mouse leave
+                    $(this).removeClass("highlight").text("Hover Over Me");
+                }
+            );
+
+            $("#mouseEnterLeaveBox").mouseenter(function(){
+                $(this).css("background-color", "pink").text("Mouse Entered!");
+            });
+
+               $("#mouseEnterLeaveBox").mouseleave(function(){
+                $(this).css("background-color", "lightblue").text("Mouse Left!");
+            });
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <!-- hide , show, toggle -->
+    <p id="text">Hello, This is jQuery Effects!</p>
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <button id="btnToggle">Toggle</button>
+
+    <!-- Fadein,fadeout,fadetoggle,fadeTo  -->
+    <div id="box" style="width:100px; height:100px; background:red;"></div>
+    <br>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="fadeTo">Fade To (0.5)</button>
+
+    <!-- slideDown(), slideUp(), slideToggle() -->
+    <button id="slideToggle">Slide Menu</button>
+    <div id="menu" style="width:200px; background:lightblue; padding:10px; display:none;">
+        <p>Menu Item 1</p>
+        <p>Menu Item 2</p>
+        <p>Menu Item 3</p>
+    </div>
+
+
+    <script>
+
+        // hide, show, toggle
+        $(document).ready(function () {
+            $("#btnHide").click(function () {
+                $("#text").hide();
+            });
+
+            $("#btnShow").click(function () {
+                $("#text").show();
+            });
+
+            $("#btnToggle").click(function () {
+                $("#text").toggle();
+            });
+        });
+
+        // Fadein,fadeout,fadetoggle,fadeTo 
+        $(document).ready(function () {
+            $("#fadeIn").click(function () {
+                $("#box").fadeIn(1000); // 1 second
+            });
+            $("#fadeOut").click(function () {
+                $("#box").fadeOut(1000);
+            });
+            $("#fadeToggle").click(function () {
+                $("#box").fadeToggle(1000);
+            });
+            $("#fadeTo").click(function () {
+                $("#box").fadeTo(1000, 0.5); // 0.5 opacity
+            });
+        });
+
+        // slideDown(), slideUp(), slideToggle()
+        $(document).ready(function () {
+            $("#slideToggle").click(function () {
+                $("#menu").slideToggle(500);
+            });
+        });
+    </script>
+</body>
+
+</html>
