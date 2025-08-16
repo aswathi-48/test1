@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <!-- text change and get -->
+
+    <p id="demo">Hello World</p>
+    <button id="get">Get Text</button>
+    <button id="set">Set Text</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#get").click(function () {
+                alert($("#demo").text()); // Get text
+            });
+
+            $("#set").click(function () {
+                $("#demo").text("New Text Here!"); // Set text
+            });
+        });
+    </script>
+
+    <!-- html tag add and get -->
+
+    <p id="demo2"><b>Bold Text</b></p>
+    <button id="getHtml">Get HTML</button>
+    <button id="setHtml">Set HTML</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#getHtml").click(function () {
+                alert($("#demo2").html()); // Get HTML
+            });
+
+            $("#setHtml").click(function () {
+                $("#demo2").html("<i>Italic Text Now</i>"); // Set HTML
+            });
+        });
+    </script>
+
+    <!-- val() → Get or set input field value. -->
+
+    <input type="text" id="name" value="my name">
+    <button id="getVal">Get Value</button>
+    <button id="setVal">Set Value</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#getVal").click(function () {
+                alert($("#name").val());
+            });
+
+            $("#setVal").click(function () {
+                $("#name").val("New Name");
+            });
+        });
+    </script>
+
+    <!-- Change Attributes  attr() → Get or set attribute values. -->
+     
+    <img id="myImg" src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" width="100">
+    <button id="changeImg">Change Image</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#changeImg").click(function () {
+                $("#myImg").attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s");
+            });
+        });
+    </script>
+
+    <!-- add and remove element -->
+
+    <p id="content">Hello</p>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+    <button id="remove">Remove</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#append").click(function () {
+                $("#content").append(" World");
+            });
+
+            $("#prepend").click(function () {
+                $("#content").prepend("Hi, ");
+            });
+
+            $("#remove").click(function () {
+                $("#content").remove();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

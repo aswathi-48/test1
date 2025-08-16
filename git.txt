@@ -1,0 +1,99 @@
+git  oru version control system anu
+simply paranjal oru project cheyyunna tymil changes store cheyyanum .
+old versionlek thirich povanum
+Team-il work cheyyumbo conflicts handle cheyyan help cheyyunna oru tool aanu.
+
+Git structure diagram:
+Working Directory  --->  Staging Area  --->  Local Repository
+     (Files)             (git add)           (git commit)
+
+GitHub oru cloud-based hosting service aanu Git repositories store cheyyan vendi.
+Ningalude Git repo online save cheyyan
+Vere alukalum collaborate cheyyan
+Issues track cheyyan
+Pull requests create cheyyan
+
+
+       LOCAL MACHINE                             GITHUB CLOUD
++------------------------+        push        +-----------------------+
+| Working Directory      | --------------->   | Remote Repository     |
+|  (code files)          |                    | (online backup)       |
++------------------------+                     +-----------------------+
+         |     ^                                           |
+         |     |                                           |
+         v     |                                           v
+   git add     |                                    git pull / clone
+   git commit  |
+         |
+ Local Git Repository
+
+
+Repository
+Git-il 2 main type repository undu:
+
+Local Repository
+Ningalude own computer-il store cheyyunnathu.
+Internet illa enkilum work cheyyum.
+Commands:
+git init → create local repo
+git commit → changes save cheyyuka
+
+Remote Repository
+GitHub, GitLab, Bitbucket pole cloud server-il store cheyyunnathu.
+Internet venam access cheyyan.
+Commands:
+git push → local → remote
+git pull → remote → local
+
+Public vs Private Repository
+
+Public -->	Ellavarkkum view/share cheyyan pattum	Open-source project
+Private -->	Only permissionulla usersinu access	Company project
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ Git – Detailed Overview
+Git oru Distributed Version Control System (DVCS) aanu.
+
+Main features:
+Distributed → Ella developers-inum full repo copy kittum (history included).
+
+Version Control → Oru file-ile old version anytime recover cheyyam.
+
+Branching → Parallel development cheyyan easy.
+
+Merge → Branch work combine cheyyam.
+
+Offline work → Internet illathathilum commit cheyyam.
+
+
+
+
+
+GitHub – Detailed Overview
+GitHub oru remote repository hosting platform aanu. Git use cheyyan vendi cloud backupum team collaborationum provide cheyyunnu.
+
+Main features:
+Remote repository hosting
+
+Public/Private repositories
+
+Pull requests (PR)
+
+Code review system
+
+Issues & bug tracking
+
+Actions (CI/CD automation)
+
+Wiki (documentation)
+
+
+
+
+git log - commit details kittan use cheyyunna Commands
+git checkout commitid - ethelum commit remove cheyyanamenkil aa commitnte  id copy cheyth ittal ath remove avum id git log cheyyumbo kittum commit id  

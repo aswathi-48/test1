@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // // hide
+        // $(document).ready(function () {
+        //     $("#head").hide();
+        // });
+
+
+        // show
+        // $(document).ready(function () {
+        //     $(".head").show();
+        // });
+
+        // css change
+        $(document).ready(function () {
+            $("#colorBtn").click(function () {
+                $("#para3").css("color", "red"); // changes text color to red
+            });
+        });
+
+        // css get
+        $(document).ready(function () {
+            $("#getColorBtn").click(function () {
+                // Get the current text color
+                var colorValue = $("#text").css("color");
+
+                // Show it in an alert
+                alert("The current text color is: " + colorValue);
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- hide and show -->
+    <p class="head" style="display: none;">helloo data</p>
+    <p>Haiii</p>
+
+    <!-- css changes -->
+    <p id="para3" style="color: yellow;">Change my color!</p>
+    <button id="colorBtn">Make Red</button>
+
+    <!-- css get -->
+    <p id="text" style="color: red;">This is a paragraph.</p>
+    <button id="getColorBtn">Get Text Color</button>
+
+    <script>
+        $("#head").hide();
+        // $(".head").hide();
+        // $("h2").hide();
+
+    </script>
+</body>
+
+</html>

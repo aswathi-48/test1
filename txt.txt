@@ -1,0 +1,177 @@
+ jQuery
+
+ jQuery is a JavaScript library.
+ It lets you write less code to do more.
+ It works on almost all browsers.
+
+
+ use cdn for use
+
+ <!-- jQuery CDN link -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+Basic Syntax
+
+$(selector).action();
+
+$ → tells the browser you’re using jQuery.
+
+selector → chooses which HTML element(s) you want to work with.
+
+action() → the task you want to do (like hide(), show(), css()).
+
+
+in body section we can write
+
+<script>
+ $("#head").hide();
+ </script>
+
+ in this code not work to the head section bcz after html dom updation only jquery code will be executed
+ in case we can set that code in the head section then use,
+
+$(document).ready(function(){
+    $("#head").hide();
+});
+
+this method
+
+$(document).ready(function(){ ... });
+This is a special jQuery function.
+Run this code only after the HTML document is fully loaded and ready to use.
+
+
+
+hide()
+
+Purpose → Makes the element invisible.
+How → Changes its CSS to display: none.
+Syntax → $(selector).hide();
+
+show()
+
+Purpose → Makes a hidden element visible again.
+How → Changes its CSS back to display: block (or original display).
+Syntax → $(selector).show();
+
+css()
+Purpose → Changes or gets CSS properties.
+How → Directly applies inline CSS styles.
+Syntax → $(selector).css("property", "value");
+
+
+css selectors
+
+id , class, tag
+
+   $("#head").hide(); ( using id)
+   $(".head").hide(); (using class)
+   $("h2").hide();    (using tag)
+
+
+ Basic Events
+
+ 1.click
+ Purpose: Runs code when the user clicks an element.
+
+ 2.dblclick
+  Purpose: Runs code when the user double clicks an element.
+
+ 3.hover
+  Purpose: Runs code when the user hover an element.
+    Mouse enter
+    Mouse leave
+hover Advantage
+
+Advantage: Oru line-il mouse enter and leave action define cheyyam.
+Disadvantage: Ithil enter & leave separate aayi use cheyyan pattilla, both together aayi thanne varum.
+
+Ithu two separate events aanu.
+Events
+mouseenter() → run aakum mouse element-il keriya samayath.
+mouseleave() → run aakum mouse element-il ninnu pokumbol.
+
+Hover → Enterum leaveum orumich use cheyyan.
+Mouseenter / Mouseleave → Enterum leaveum separate events aayi full control venam engil use cheyyuka.
+
+
+What are Effects in jQuery?
+
+Common jQuery Effects
+1. 
+(a) hide() & show()
+hide(): Element disappear aakum.
+show(): Element visible aakum.
+(b) toggle()
+toggle(): Same button click cheyyumbol hide & show interchange aakum.
+
+2. fadeIn(), fadeOut(), fadeToggle(), fadeTo()
+fadeIn() → Slow aayi visible aakum.
+fadeOut() → Slow aayi invisible aakum.
+fadeToggle() → Fade in/out switch cheyyum.
+fadeTo() → Transparency set cheyyum (opacity value 0 to 1).
+
+3.slideDown(), slideUp(), slideToggle()
+slideDown() → Element thazhe ninn open aakum.
+slideUp() → Element melottu close aakum.
+slideToggle() → Slide up/down switch cheyyum.
+
+
+Animations in jQuery
+Animation = Element properties smoothly change cheyyunnu.
+animate() method use cheyyum.
+
+
+DOM 
+
+DOM (Document Object Model) ennu parayunnathu, 
+HTML document-ine oru tree structure aayi represent cheyyunna model aanu.
+Oru HTML page load aayal, 
+browser athine JavaScript/JQuery use cheyth manipulate (change) 
+cheyyan pattunna object structure aayi create cheyyum.
+
+<html>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html>
+Ithu DOM-il document → body → h1 enn tree pole und.
+
+
+DOM Manipulation 
+HTML elements read, add, remove, change content, change CSS etc. 
+cheyyunnathine aanu DOM Manipulation ennu parayunnathu.
+
+jQuery- DOM Manipulation
+ Get or Set Text
+ text() → Get or set element text content.
+
+ Get or Set HTML
+ html() → Get or set HTML content (with tags).
+
+ Get or Set Form Values
+ val() → Get or set input field value.
+
+ Change Attributes
+ attr() → Get or set attribute values.
+
+ Add or Remove Elements
+
+ append() → Add inside end of element.
+prepend() → Add inside start of element.
+after() → Add outside after element.
+before() → Add outside before element.
+remove() → Remove element.
+empty() → Remove inner content only.
+
+
+
+
+
+why js more popular
+Ippo browsers modern JavaScript features (ES6+, DOM API improvements) support cheyyunnu.
+Performance – Pure JS jQuery kkaal speed adhikam aanu, extra library load cheyyenda illa.
+No extra file – jQuery use cheyyumbo oru 80–90 KB library download cheyyanam. JS direct browser il undu.
+Modern syntax – querySelector, fetch, classList pole puthiya JS methods ellam easy aanu.
+Frameworks – Ippo React, Vue, Angular pole frameworks JavaScript il aanu base. jQuery avide venda.
+Mobile optimization – Pure JS apps mobile il better perform cheyyum.
