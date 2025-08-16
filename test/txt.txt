@@ -1,4 +1,4 @@
- jQueryy
+ jQueryyyyy
 
  jQuery is a JavaScript library.
  It lets you write less code to do more.
